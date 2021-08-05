@@ -1,0 +1,23 @@
+{% extends "home_layout.html" %}
+{% block content %}
+<div class="container">
+    <div class="row justify-content-end align-items-center" style="margin-top: 50px;">
+      <div class="card-transparent" style="width: 45rem; margin-top: 90px; ">
+        <div class="card-body ">
+          <img src="static/logo.png" class="rounded float-left" height="165rm" style="margin-bottom: 10px;"></a>
+          <!-- Input box -->
+          <form method="POST" action=" {{ url_for('serp') }}">
+             <div class="input-group mb-3 ">
+            <input class="form-control form-control-borderless" type="search" name="query"
+                   placeholder="Search Brand Product name" style="color:#a67b5b">
+            <div class="form-group">
+              {{ form.submit(class="btn btn-outline-success") }}
+            </div>
+          </div>
+          </form>
+          <!-- Input box -->
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

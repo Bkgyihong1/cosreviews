@@ -1,0 +1,36 @@
+a {
+    color: #2196F3;
+    text-decoration: none;
+}
+
+
+.result{
+    font-weight: light;
+}
+
+strong{
+    color:#ff6347;
+}
+
+li{
+    color:#704241;
+}
+
+h3{
+    color:#704241;
+}
+
+.nav-tabs-dropdown {
+  display: none;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+
+@media screen and (min-width: 769px) {
+  #nav-tabs-wrapper {
+    display: block!important;
+    margin-top: 20px;
+    border:black;
+  }
+}

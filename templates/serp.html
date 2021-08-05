@@ -1,0 +1,29 @@
+{% extends "serp_layout.html" %}
+
+<!-- Rest of the body-->
+<!-- Search results-->
+{% block content %}
+{% for serp in serps %}
+<div class="row border-bottom justify-content-start align-items-center" style="margin-top:10px">
+
+    <a href = "{{ serp.link }}" style="color: #674846"><h4>{{ serp.title }}</h4></a>
+    <a href = "{{ serp.link }}" > {{ serp.link }} </a>
+    <p class="text-muted"><small>{{ serp.score }}</small> </p>
+
+</div>
+{% endfor %}
+{% endblock content %}
+
+<!--Recommendation Results-->
+{% block recommendations %}
+<div class="row border-bottom justify-content-start align-items-center" style="margin-top:10px">
+    <p class="lead"><small>Based off your search, it appears that you are interested in<br>
+        <strong>" {{ query }} "</strong>; <br>
+        Why not have a look at these related products ;</small></p>
+</div>
+{% for rec in recc %}
+<div class="row border-bottom justify-content-start align-items-center" style="margin-top:10px">
+    <p style="color: #483d8b">{{ rec.recp }}</p>
+</div>
+{% endfor %}
+{% endblock %}
